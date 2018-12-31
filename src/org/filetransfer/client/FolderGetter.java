@@ -1,4 +1,4 @@
-package org.filetransfer;
+package org.filetransfer.client;
 
 /*
 Author: Alex Cogelja
