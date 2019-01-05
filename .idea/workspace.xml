@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24fba81-e206-40a2-9b4e-c42ddd254b0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Todo" beforeDir="false" afterPath="$PROJECT_DIR$/Todo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +17,7 @@
     <session id="981718597">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.4" value="1" />
@@ -42,19 +32,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7512" />
-          <entry key="PLAIN_TEXT" value="334" />
+          <entry key="JAVA" value="7998" />
+          <entry key="PLAIN_TEXT" value="435" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+            <state relative-caret-position="343">
+              <caret line="247" column="64" selection-start-line="247" selection-start-column="64" selection-end-line="247" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6386#7142#0" expanded="true" />
@@ -64,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Todo">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="17">
+              <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -76,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-269">
+            <state relative-caret-position="-167">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -88,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="394">
+              <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,8 +106,9 @@
         <option value="$PROJECT_DIR$/src/org/filetransfer/Main.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/server/Main.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" />
-        <option value="$PROJECT_DIR$/Todo" />
+        <option value="$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" />
+        <option value="$PROJECT_DIR$/Todo" />
       </list>
     </option>
   </component>
@@ -199,7 +190,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546726218182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546727004949" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -219,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ServerMain">
+  <component name="RunManager" selected="Application.ClientMain">
     <configuration name="ClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.filetransfer.client.ClientMain" />
       <module name="FileProject" />
@@ -280,8 +271,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ServerMain" />
         <item itemvalue="Application.ClientMain" />
+        <item itemvalue="Application.ServerMain" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -300,7 +291,7 @@
       <workItem from="1546147903502" duration="6263000" />
       <workItem from="1546214432569" duration="7125000" />
       <workItem from="1546310373978" duration="1620000" />
-      <workItem from="1546725520216" duration="695000" />
+      <workItem from="1546725520216" duration="1481000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Server infastructure implemented">
       <created>1546221587504</created>
@@ -313,7 +304,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15703000" />
+    <option name="totallyTimeSpent" value="16489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -328,7 +319,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2776204" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2776204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,27 +351,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Basic Server infastructure implemented" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Todo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="394">
+          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -389,13 +363,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+        <state relative-caret-position="343">
+          <caret line="247" column="64" selection-start-line="247" selection-start-column="64" selection-end-line="247" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6386#7142#0" expanded="true" />
             <element signature="e#7141#7142#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
         </state>
       </provider>
     </entry>

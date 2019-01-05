@@ -143,7 +143,12 @@ public class ClientMain extends Application {
         });
 
         upload = new Button("Upload File");
-        
+        upload.setLayoutX(connect.getLayoutX());
+        upload.setLayoutY(connect.getLayoutY() + 40);
+
+        TextField selectFile = new TextField();
+        selectFile.setLayoutX(disconnect.getLayoutX() - 40);
+        selectFile.setLayoutY(upload.getLayoutY());
 
         //add all of the objects
         pane.getChildren().add(inputArea);
@@ -153,6 +158,8 @@ public class ClientMain extends Application {
         pane.getChildren().add(connect);
         pane.getChildren().add(disconnect);
         pane.getChildren().add(files);
+        pane.getChildren().add(upload);
+        pane.getChildren().add(selectFile);
 
         scene = new Scene(pane, 600, 600);
         scene.setFill(Color.BEIGE);
@@ -232,6 +239,18 @@ public class ClientMain extends Application {
                 }
             }
             return true;
+        }
+
+        public boolean upload(File file){
+            if (file != null && connected){
+                try {
+                    FileInputStream getter = new FileInputStream(file);
+                    //Need to indicate server should read a file
+                    toServer.writeByte(getter.read());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
     }

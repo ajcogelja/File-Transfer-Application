@@ -68,7 +68,13 @@ public class FolderGetter {
 
     //get a file from the folder
     public File getFile(String name){
-        return map.get(hash(name));
+        File selected;
+        selected = map.get(hash(name));
+        if (selected.getName().equals(name)){
+            return selected;
+        } else {
+            return null;
+        }
     }
 
 }

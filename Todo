@@ -1,4 +1,5 @@
 TODO:
-- Allow files to be uploaded to server
+- Add upload button functionality/finish upload method
+- make upload path field for file
 - Improve File Selection Process
 - Make overall UI prettier
