@@ -1,5 +1,4 @@
 TODO:
-- Add ability to connect to client
-- Improve File Chooser
+- Allow files to be uploaded to server
+- Improve File Selection Process
 - Make overall UI prettier
-- Client ID needs to update once server sets its ID

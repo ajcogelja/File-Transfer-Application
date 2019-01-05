@@ -1,73 +1,54 @@
 package org.filetransfer.server;
 
-import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public class ServerMain extends Application {
+/*
+Author: Alex Cogelja
+Date: 12/29/2018
+Purpose: The server which files are sent to, and retrieved from
+ */
 
-    //JavaFX objects
-    private Scene scene;
-    private Pane pane;
-    private Button beginServer;
+public class ServerMain{
+
     private int port = 1582; //port server runs on
     private ServerSocket serverSocket; //socket indicating server
     private Socket socket; //socket client connects to
     private int id = 0;
     private List<ClientThread> clients = new ArrayList<ClientThread>();
 
+    HashMap<Integer, File> map;
+
+    public ServerMain(int port){
+        this.port = port;
+    }
 
     private void startServer(){
         try{
             serverSocket = new ServerSocket(port);
             while(true){
-                Thread.sleep(5);
                 socket = serverSocket.accept();
+                System.out.println("Client Connected");
                 Runnable run = new ClientThread(socket, id++);
                 Thread thread = new Thread(run);
                 clients.add((ClientThread) run);
                 thread.start();
+                Thread.sleep(5);
             }
         }catch (Exception e){
             e.printStackTrace();
         }
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        //Initialize required parameters
-        pane = new Pane();
-        beginServer = new Button("Start Server");
-        beginServer.setLayoutY(20);
-        beginServer.setLayoutX(20);
-        beginServer.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                startServer();
-            }
-        });
-
-        //add all objects to the scene
-        pane.getChildren().add(beginServer);
-
-        //Opens and displays the window
-        scene = new Scene(pane, 600, 600);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
     public static void main(String[] args) {
-        launch(args);
+        ServerMain serverMain = new ServerMain(1582);
+        serverMain.startServer();
     }
 
     private final class ClientThread implements Runnable{

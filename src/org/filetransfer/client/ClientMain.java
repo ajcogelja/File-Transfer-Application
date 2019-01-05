@@ -6,6 +6,8 @@ import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -29,6 +31,7 @@ public class ClientMain extends Application {
     private Button inputPath;
     private Button connect;
     private Button disconnect;
+    private Button upload;
     private TextArea textbox;
     private String fileList;
 
@@ -60,6 +63,17 @@ public class ClientMain extends Application {
         path.setLayoutX(inputArea.getLayoutX() + 180);
         path.setLayoutY(12);
         path.setFont(Font.font("Verdana", 13));
+        path.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if (event.getCode() == KeyCode.ENTER && path.getText().length() > 0){
+                    fg = new FolderGetter(path.getText());
+                    fg.openFolder();
+                    fileList = fg.listFiles();
+                    textbox.setText(fileList);
+                }
+            }
+        });
 
         //initialize the private components from above
         pane = new Pane();
@@ -104,8 +118,10 @@ public class ClientMain extends Application {
                 if (!connected){
                     client = new Client("127.0.0.1", 1582);
                     client.openConnection();
-                    System.out.println("Connected!");
-                    connected = true;
+                    if(client != null && client.isConnected()) {
+                        System.out.println("Connected!");
+                        connected = true;
+                    }
                 } else {
                     System.out.println("Already Connected to a Server");
                 }
@@ -120,13 +136,14 @@ public class ClientMain extends Application {
             public void handle(MouseEvent event) {
                 if (connected){
                     client.disconnect();
-                    connected = false;
-                    System.out.println("Disconnected!");
                 } else {
                     System.out.println("Not Connected");
                 }
             }
         });
+
+        upload = new Button("Upload File");
+        
 
         //add all of the objects
         pane.getChildren().add(inputArea);
@@ -160,6 +177,13 @@ public class ClientMain extends Application {
             this.server = server;
         }
 
+        public boolean isConnected(){
+            if (socket != null && socket.isConnected()){
+                return true;
+            } else {
+                return false;
+            }
+        }
         private boolean openConnection(){
             try{
                 socket = new Socket(server, port);
@@ -179,7 +203,9 @@ public class ClientMain extends Application {
                     while(true){ //this is what we want to listen for
                         try {
                             sleep(100);
-                            System.out.println("Connected to a server");
+                            if (connected) {
+                                System.out.println("Connected to a server");
+                            }
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -199,6 +225,8 @@ public class ClientMain extends Application {
                     socket.close();
                     fromServer.close();
                     toServer.close();
+                    connected = false;
+                    System.out.println("Disconnected Successfully");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
