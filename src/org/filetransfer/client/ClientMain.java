@@ -150,6 +150,18 @@ public class ClientMain extends Application {
         selectFile.setLayoutX(disconnect.getLayoutX() - 40);
         selectFile.setLayoutY(upload.getLayoutY());
 
+        upload.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (connected && selectFile.getText().length() > 0){
+                    String filepath = path.getText() + "/" + selectFile.getText();
+                    File file = fg.getFile(filepath);
+                    System.out.println(file.getName());
+                    //client.upload(fg.getFile(path.getText() + selectFile.getText()));
+                }
+            }
+        });
+
         //add all of the objects
         pane.getChildren().add(inputArea);
         pane.getChildren().add(textbox);
@@ -246,11 +258,20 @@ public class ClientMain extends Application {
                 try {
                     FileInputStream getter = new FileInputStream(file);
                     //Need to indicate server should read a file
-                    toServer.writeByte(getter.read());
+                    System.out.println("Starting sending data");
+                    toServer.writeInt(1);
+                    /*int data;
+                    while((data = getter.read()) != -1) {
+                        toServer.writeByte(data);
+                    }*/
+                    //toServer.writeInt(-1); //-1 indicates end of trans.
+                    System.out.println("Finished sending data");
+                    return true;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+            return false;
         }
 
     }

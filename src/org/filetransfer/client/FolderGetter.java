@@ -33,7 +33,10 @@ public class FolderGetter {
             folder = new File(path);
             if (folder.isDirectory()){
                 for (File f:folder.listFiles()) {
-                    map.put(hash(f.getName()), f);
+                    if (f.isFile()) {
+                        System.out.println(f.getName());
+                        map.put(hash(f.getName()), f);
+                    }
                 }
             } else {
                 System.out.println("Path does not point to a directory");

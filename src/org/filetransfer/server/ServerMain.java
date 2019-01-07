@@ -74,8 +74,15 @@ public class ServerMain{
         public void run() {
             while(true){
                 try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
+                    Thread.sleep(2);
+                    int command = fromClient.readInt();
+                    switch (command){
+                        case 1: //get file
+                            System.out.println("1 Received");
+                            break;
+
+                    }
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }

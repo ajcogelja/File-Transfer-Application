@@ -1,5 +1,6 @@
 TODO:
 - Add upload button functionality/finish upload method
+- Fix getting files method, cause its broken AF
 - make upload path field for file
 - Improve File Selection Process
 - Make overall UI prettier
