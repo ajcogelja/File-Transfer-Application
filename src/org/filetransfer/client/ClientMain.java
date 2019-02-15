@@ -63,15 +63,12 @@ public class ClientMain extends Application {
         path.setLayoutX(inputArea.getLayoutX() + 180);
         path.setLayoutY(12);
         path.setFont(Font.font("Verdana", 13));
-        path.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                if (event.getCode() == KeyCode.ENTER && path.getText().length() > 0){
-                    fg = new FolderGetter(path.getText());
-                    fg.openFolder();
-                    fileList = fg.listFiles();
-                    textbox.setText(fileList);
-                }
+        path.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER && path.getText().length() > 0){
+                fg = new FolderGetter(path.getText());
+                fg.openFolder();
+                fileList = fg.listFiles();
+                textbox.setText(fileList);
             }
         });
 
@@ -96,49 +93,40 @@ public class ClientMain extends Application {
         inputPath.setMinHeight(30);
         inputPath.setMinWidth(80);
         inputPath.setLayoutX(path.getLayoutX() + path.getMinWidth() + 5);
-        inputPath.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                System.out.println("Clicked");
-                if (path.getText().length() > 0 ){
-                    fg = new FolderGetter(path.getText());
-                    fg.openFolder();
-                    fileList = fg.listFiles();
-                    textbox.setText(fileList);
-                }
+        inputPath.setOnMouseClicked(event -> {
+            System.out.println("Clicked");
+            if (path.getText().length() > 0 ){
+                fg = new FolderGetter(path.getText());
+                fg.openFolder();
+                fileList = fg.listFiles();
+                textbox.setText(fileList);
             }
         });
 
         connect = new Button("Connect to Server");
         connect.setLayoutX(textbox.getLayoutX() + 250);
         connect.setLayoutY(textbox.getLayoutY() + 10);
-        connect.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (!connected){
-                    client = new Client("127.0.0.1", 1582);
-                    client.openConnection();
-                    if(client != null && client.isConnected()) {
-                        System.out.println("Connected!");
-                        connected = true;
-                    }
-                } else {
-                    System.out.println("Already Connected to a Server");
+        connect.setOnMouseClicked(event -> {
+            if (!connected){
+                client = new Client("127.0.0.1", 1582);
+                client.openConnection();
+                if(client != null && client.isConnected()) {
+                    System.out.println("Connected!");
+                    connected = true;
                 }
+            } else {
+                System.out.println("Already Connected to a Server");
             }
         });
 
         disconnect = new Button("Disconnect");
         disconnect.setLayoutX(connect.getLayoutX() + 160);
         disconnect.setLayoutY(connect.getLayoutY());
-        disconnect.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (connected){
-                    client.disconnect();
-                } else {
-                    System.out.println("Not Connected");
-                }
+        disconnect.setOnMouseClicked(event -> {
+            if (connected){
+                client.disconnect();
+            } else {
+                System.out.println("Not Connected");
             }
         });
 
@@ -150,17 +138,14 @@ public class ClientMain extends Application {
         selectFile.setLayoutX(disconnect.getLayoutX() - 40);
         selectFile.setLayoutY(upload.getLayoutY());
 
-        upload.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (connected && selectFile.getText().length() > 0){
-                    String filename = selectFile.getText();
-                    File file = fg.getFile(filename);
-                    System.out.println(file.getName());
-                    client.upload(fg.getFile(selectFile.getText()));
-                } else {
+        upload.setOnMouseClicked(event -> {
+            if (connected && selectFile.getText().length() > 0){
+                String filename = selectFile.getText();
+                File file = fg.getFile(filename);
+                System.out.println(file.getName());
+                client.upload(fg.getFile(selectFile.getText()));
+            } else {
 
-                }
             }
         });
 
