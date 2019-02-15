@@ -22,11 +22,11 @@ public class ServerMain{
     private Socket socket; //socket client connects to
     private int id = 0;
     private List<ClientThread> clients = new ArrayList<ClientThread>();
-
-    HashMap<Integer, File> map;
+    HashMap<String, File> map;
 
     public ServerMain(int port){
         this.port = port;
+        map = new HashMap<>();
     }
 
     private void startServer(){
@@ -72,13 +72,24 @@ public class ServerMain{
 
         @Override
         public void run() {
-            while(true){
+            boolean running = true;
+            while(running){
                 try {
                     Thread.sleep(2);
                     int command = fromClient.readInt();
+                    String name;
                     switch (command){
                         case 1: //get file
                             System.out.println("1 Received");
+                            name = fromClient.readUTF();
+                            System.out.println(name);
+                            break;
+                        case -1:
+                            System.out.println("End of File Received");
+                            break;
+                        case -2:
+                            running = false;
+                            System.out.println("Closing Client Thread");
                             break;
 
                     }

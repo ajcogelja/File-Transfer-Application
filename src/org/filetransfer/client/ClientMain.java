@@ -157,9 +157,9 @@ public class ClientMain extends Application {
                     String filename = selectFile.getText();
                     File file = fg.getFile(filename);
                     System.out.println(file.getName());
-                    //client.upload(fg.getFile(path.getText() + selectFile.getText()));
+                    client.upload(fg.getFile(selectFile.getText()));
                 } else {
-                    
+
                 }
             }
         });
@@ -243,6 +243,7 @@ public class ClientMain extends Application {
         public boolean disconnect(){
             if (socket.isConnected()){
                 try {
+                    toServer.writeInt(-2);
                     socket.close();
                     fromServer.close();
                     toServer.close();
@@ -260,13 +261,15 @@ public class ClientMain extends Application {
                 try {
                     FileInputStream getter = new FileInputStream(file);
                     //Need to indicate server should read a file
+                    //IT WORKS!!!
                     System.out.println("Starting sending data");
                     toServer.writeInt(1);
+                    toServer.writeUTF(file.getName());
                     /*int data;
                     while((data = getter.read()) != -1) {
                         toServer.writeByte(data);
                     }*/
-                    //toServer.writeInt(-1); //-1 indicates end of trans.
+                    toServer.writeInt(-1); //-1 indicates end of trans.
                     System.out.println("Finished sending data");
                     return true;
                 } catch (Exception e) {
