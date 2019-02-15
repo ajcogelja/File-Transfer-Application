@@ -154,10 +154,12 @@ public class ClientMain extends Application {
             @Override
             public void handle(MouseEvent event) {
                 if (connected && selectFile.getText().length() > 0){
-                    String filepath = path.getText() + "/" + selectFile.getText();
-                    File file = fg.getFile(filepath);
+                    String filename = selectFile.getText();
+                    File file = fg.getFile(filename);
                     System.out.println(file.getName());
                     //client.upload(fg.getFile(path.getText() + selectFile.getText()));
+                } else {
+                    
                 }
             }
         });
