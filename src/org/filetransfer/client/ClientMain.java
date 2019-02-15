@@ -225,7 +225,7 @@ public class ClientMain extends Application {
                         try {
                             sleep(100);
                             if (connected) {
-                                System.out.println("Connected to a server");
+                                //System.out.println("Connected to a server");
                             }
                         } catch (InterruptedException e) {
                             e.printStackTrace();
@@ -265,10 +265,10 @@ public class ClientMain extends Application {
                     System.out.println("Starting sending data");
                     toServer.writeInt(1);
                     toServer.writeUTF(file.getName());
-                    /*int data;
+                    int data;
                     while((data = getter.read()) != -1) {
-                        toServer.writeByte(data);
-                    }*/
+                        toServer.writeInt(data);
+                    }
                     toServer.writeInt(-1); //-1 indicates end of trans.
                     System.out.println("Finished sending data");
                     return true;

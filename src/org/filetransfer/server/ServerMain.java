@@ -3,6 +3,7 @@ package org.filetransfer.server;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -70,6 +71,25 @@ public class ServerMain{
             }
         }
 
+        public void read(String name){//works with absolute path
+            File file = new File("C:\\Users\\op3er\\IdeaProjects\\FileProject\\src\\org\\filetransfer\\server\\contents\\" +  name);
+            FileOutputStream fout;
+            try {
+                if (!file.exists()) {
+                    file.createNewFile();
+                }
+                fout = new FileOutputStream(file);
+                int data;
+                while((data = fromClient.readInt()) != -1){
+                    fout.write(data);
+                }
+                fout.close();
+            } catch (Exception e){
+                //System.out.println("Incomplete read, deleting file");
+                //file.delete();
+            }
+        }
+
         @Override
         public void run() {
             boolean running = true;
@@ -83,6 +103,7 @@ public class ServerMain{
                             System.out.println("1 Received");
                             name = fromClient.readUTF();
                             System.out.println(name);
+                            read(name);
                             break;
                         case -1:
                             System.out.println("End of File Received");
