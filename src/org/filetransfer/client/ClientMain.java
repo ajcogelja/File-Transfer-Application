@@ -16,6 +16,8 @@ import javafx.scene.text.Text;
 import javafx.stage.*;
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
 Author: Alex Cogelja
@@ -32,6 +34,7 @@ public class ClientMain extends Application {
     private Button connect;
     private Button disconnect;
     private Button upload;
+    private TextArea serverList;
     private TextArea textbox;
     private String fileList;
 
@@ -149,6 +152,15 @@ public class ClientMain extends Application {
             }
         });
 
+        serverList = new TextArea();
+        serverList.setLayoutY(upload.getLayoutY() + 40);
+        serverList.setLayoutX(upload.getLayoutX());
+        serverList.setMaxWidth(200);
+        serverList.setMinWidth(150);
+        serverList.setMinHeight(350);
+        serverList.setMaxHeight(350);
+        serverList.setEditable(false);
+
         //add all of the objects
         pane.getChildren().add(inputArea);
         pane.getChildren().add(textbox);
@@ -159,6 +171,7 @@ public class ClientMain extends Application {
         pane.getChildren().add(files);
         pane.getChildren().add(upload);
         pane.getChildren().add(selectFile);
+        pane.getChildren().add(serverList);
 
         scene = new Scene(pane, 600, 600);
         scene.setFill(Color.BEIGE);
@@ -205,13 +218,19 @@ public class ClientMain extends Application {
                     //this loop should write to the server what we want to do
                     //if we want to send a file write byte 00000001
                     //if nothing write byte 00000000
+                    if (connected) {
+                        serverList.clear();
+                        List<String> sFiles = getServerFiles();
+                        if(sFiles != null) {
+                            for (String s : sFiles) {
+                                serverList.appendText(s + "\n");
+                            }
+                        }
+                    }
 
                     while(true){ //this is what we want to listen for
                         try {
-                            sleep(100);
-                            if (connected) {
-                                //System.out.println("Connected to a server");
-                            }
+                            sleep(200);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -239,6 +258,32 @@ public class ClientMain extends Application {
                 }
             }
             return true;
+        }
+
+        public List<String> getServerFiles(){
+            if(connected){
+                List<String> serverFiles = new ArrayList<>();
+                try {
+                    toServer.writeInt(2);
+                    int reading;
+                    while((reading = fromServer.readInt()) != -1){
+                        String input = fromServer.readUTF();
+                        serverFiles.add(input);
+                    }
+                    toServer.writeInt(-1);
+                    return serverFiles;
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+
+            } else {
+                System.out.println("Cannot retrieve list, no connection to Server");
+            }
+            return null;
+        }
+
+        public void retrieve(File file){
+
         }
 
         public boolean upload(File file){

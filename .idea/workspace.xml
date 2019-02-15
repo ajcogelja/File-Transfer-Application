@@ -4,7 +4,17 @@
     <list default="true" id="a24fba81-e206-40a2-9b4e-c42ddd254b0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Todo" beforeDir="false" afterPath="$PROJECT_DIR$/Todo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,40 +36,42 @@
     <session id="981718597">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="6" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9698" />
-          <entry key="PLAIN_TEXT" value="1076" />
+          <entry key="JAVA" value="11071" />
+          <entry key="PLAIN_TEXT" value="1327" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.36919674">
+    <splitter split-orientation="horizontal" split-proportion="0.50332105">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="261">
-                  <caret line="227" column="34" selection-start-line="227" selection-start-column="34" selection-end-line="227" selection-end-column="34" />
+                <state relative-caret-position="170">
+                  <caret line="297" column="29" selection-start-line="297" selection-start-column="29" selection-end-line="297" selection-end-column="29" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#7108#8157#0" expanded="true" />
+                    <element signature="e#8156#8157#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -68,8 +80,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Todo">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+                <state relative-caret-position="34">
+                  <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -77,10 +89,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+                <state relative-caret-position="-85">
+                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#671#685#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -89,7 +102,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
+                <state relative-caret-position="428">
                   <caret line="71" selection-start-line="71" selection-end-line="71" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -101,12 +114,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="343">
-                  <caret line="86" column="46" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
+                <state relative-caret-position="238">
+                  <caret line="74" column="39" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -149,7 +162,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1905" />
-    <option name="width" value="1948" />
+    <option name="width" value="1950" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -176,6 +189,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,44 +198,16 @@
               <item name="File Transfer" type="b2602c69:ProjectViewProjectNode" />
               <item name="FileProject" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="File Transfer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FileProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="File Transfer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FileProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="filetransfer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="File Transfer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FileProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="filetransfer" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="File Transfer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FileProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="filetransfer" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="contents" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550250648031" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550251089506" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -324,7 +311,8 @@
       <workItem from="1546725520216" duration="1481000" />
       <workItem from="1546814192826" duration="1901000" />
       <workItem from="1547164748219" duration="32000" />
-      <workItem from="1550245799370" duration="3349000" />
+      <workItem from="1550245799370" duration="3804000" />
+      <workItem from="1550260938497" duration="7461000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Server infastructure implemented">
       <created>1546221587504</created>
@@ -368,17 +356,31 @@
       <option name="project" value="LOCAL" />
       <updated>1550250522134</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Files sent to server now populate the server's hashmap">
+      <created>1550250676011</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550250676011</updated>
+    </task>
+    <task id="LOCAL-00008" summary="replaced statements with lambdas">
+      <created>1550261512745</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550261512745</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21771000" />
+    <option name="totallyTimeSpent" value="29687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08987257" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09121395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -387,7 +389,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2776204" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2776204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -397,7 +399,6 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32997987" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -407,6 +408,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32997987" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,38 +424,28 @@
     <MESSAGE value="Reading from client and writing files to the server is working with absolute paths" />
     <MESSAGE value="writing to server works with relative paths&#10;Woot!" />
     <MESSAGE value="Added some todo's and if a file transfer fails it deletes the incomplete file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some todo's and if a file transfer fails it deletes the incomplete file" />
+    <MESSAGE value="Files sent to server now populate the server's hashmap" />
+    <MESSAGE value="replaced statements with lambdas" />
+    <option name="LAST_COMMIT_MESSAGE" value="replaced statements with lambdas" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sudo.txt" />
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/contents/sudo.txt" />
     <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="227" column="34" selection-start-line="227" selection-start-column="34" selection-end-line="227" selection-end-column="34" />
+        <state relative-caret-position="170">
+          <caret line="297" column="29" selection-start-line="297" selection-start-column="29" selection-end-line="297" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sudo.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/contents/sudo.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#7108#8157#0" expanded="true" />
+            <element signature="e#8156#8157#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="428">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -461,10 +453,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#671#685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Todo">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
         </state>
       </provider>
     </entry>

@@ -23,11 +23,25 @@ public class ServerMain{
     private Socket socket; //socket client connects to
     private int id = 0;
     private List<ClientThread> clients = new ArrayList<ClientThread>();
-    HashMap<String, File> map;
+    private HashMap<String, File> map;
+    private final String DIRECTORYPATH = "src/org/filetransfer/server/contents/";
 
     public ServerMain(int port){
         this.port = port;
         map = new HashMap<>();
+        File file = new File(DIRECTORYPATH);
+        try {
+            if (file.exists() && file.isDirectory()){
+                System.out.println("Directory Exists");
+                for (File f:file.listFiles()) {
+                    map.put(f.getName(), f);
+                }
+            } else {
+                System.out.println("Does not exist");
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private void startServer(){
@@ -58,6 +72,7 @@ public class ServerMain{
         DataInputStream fromClient; //thread to read data from client
         DataOutputStream toClient; //thread to write data to client
         int id;
+        byte[] buffer = new byte[1024];
 
         private ClientThread(Socket socket, int id){
             this.id = id;
@@ -69,6 +84,10 @@ public class ServerMain{
             }catch (Exception e){
 
             }
+        }
+
+        public void write(String name){
+
         }
 
         public void read(String name){//works with absolute path
@@ -106,6 +125,13 @@ public class ServerMain{
                             System.out.println(name);
                             read(name);
                             break;
+                        case 2: //send file list to client;
+                            for (String s:map.keySet()) {
+                                toClient.writeInt(1);
+                                toClient.writeUTF(s);
+                                System.out.println(s);
+                            }
+                            toClient.writeInt(-1);
                         case -1:
                             System.out.println("End of File Received");
                             break;
@@ -113,7 +139,6 @@ public class ServerMain{
                             running = false;
                             System.out.println("Closing Client Thread");
                             break;
-
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

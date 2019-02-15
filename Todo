@@ -1,9 +1,9 @@
 TODO:
-- Add upload button functionality/finish upload method
-- Make upload path field for file
 - Improve File Selection Process (click interface?)
+- Rewrite data transfer to use 1 kilobyte buffers
 - Make overall UI prettier
 - Code writing to client from server
 - Change server to work off of public IP's not just localhost
 - Think of more functionality!
 - Build server hashmap out!
+- Add Huffman encoding tree and write huffman copy to server
