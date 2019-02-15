@@ -85,8 +85,8 @@ public class ServerMain{
                 }
                 fout.close();
             } catch (Exception e){
-                //System.out.println("Incomplete read, deleting file");
-                //file.delete();
+                System.out.println("Incomplete read, deleting file");
+                file.delete();
             }
         }
 

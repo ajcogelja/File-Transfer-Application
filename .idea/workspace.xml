@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a24fba81-e206-40a2-9b4e-c42ddd254b0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todo" beforeDir="false" afterPath="$PROJECT_DIR$/Todo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" afterDir="false" />
     </list>
@@ -44,7 +44,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="9674" />
-          <entry key="PLAIN_TEXT" value="675" />
+          <entry key="PLAIN_TEXT" value="911" />
         </counts>
       </usages-collector>
     </session>
@@ -53,7 +53,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.36919674">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="261">
@@ -65,11 +65,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Todo">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -105,8 +105,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="74" column="71" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
+                <state relative-caret-position="343">
+                  <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -135,9 +135,9 @@
         <option value="$PROJECT_DIR$/src/org/filetransfer/Main.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/server/Main.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java" />
-        <option value="$PROJECT_DIR$/Todo" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" />
+        <option value="$PROJECT_DIR$/Todo" />
       </list>
     </option>
   </component>
@@ -220,7 +220,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550250320829" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550250473912" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -240,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientMain">
+  <component name="RunManager" selected="Application.ServerMain">
     <configuration name="ClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.filetransfer.client.ClientMain" />
       <module name="FileProject" />
@@ -301,8 +301,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientMain" />
         <item itemvalue="Application.ServerMain" />
+        <item itemvalue="Application.ClientMain" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -324,7 +324,7 @@
       <workItem from="1546725520216" duration="1481000" />
       <workItem from="1546814192826" duration="1901000" />
       <workItem from="1547164748219" duration="32000" />
-      <workItem from="1550245799370" duration="3023000" />
+      <workItem from="1550245799370" duration="3176000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Server infastructure implemented">
       <created>1546221587504</created>
@@ -354,16 +354,24 @@
       <option name="project" value="LOCAL" />
       <updated>1550250161036</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="writing to server works with relative paths&#10;Woot!">
+      <created>1550250344885</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550250344885</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21445000" />
+    <option name="totallyTimeSpent" value="21598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08987257" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08987257" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -372,7 +380,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2776204" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2776204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -405,7 +413,8 @@
     <MESSAGE value="Getting files method has been fixed!" />
     <MESSAGE value="Beginning Server Read Functionality" />
     <MESSAGE value="Reading from client and writing files to the server is working with absolute paths" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reading from client and writing files to the server is working with absolute paths" />
+    <MESSAGE value="writing to server works with relative paths&#10;Woot!" />
+    <option name="LAST_COMMIT_MESSAGE" value="writing to server works with relative paths&#10;Woot!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
@@ -415,13 +424,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Todo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -443,11 +445,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="74" column="71" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
+        <state relative-caret-position="272">
+          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
