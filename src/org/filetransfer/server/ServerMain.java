@@ -72,7 +72,7 @@ public class ServerMain{
         }
 
         public void read(String name){//works with absolute path
-            File file = new File("C:\\Users\\op3er\\IdeaProjects\\FileProject\\src\\org\\filetransfer\\server\\contents\\" +  name);
+            File file = new File("src/org/filetransfer/server/contents/" +  name);
             FileOutputStream fout;
             try {
                 if (!file.exists()) {
