@@ -84,6 +84,7 @@ public class ServerMain{
                     fout.write(data);
                 }
                 fout.close();
+                map.put(file.getName(), file);
             } catch (Exception e){
                 System.out.println("Incomplete read, deleting file");
                 file.delete();
