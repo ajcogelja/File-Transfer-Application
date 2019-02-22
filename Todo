@@ -5,5 +5,4 @@ TODO:
 - Code writing to client from server
 - Change server to work off of public IP's not just localhost
 - Think of more functionality!
-- Build server hashmap out!
 - Add Huffman encoding tree and write huffman copy to server

@@ -54,6 +54,7 @@ public class FolderGetter {
 
     //Gets a list of all the files in the folder
     public String listFiles(){
+        output.delete(0, output.length() - 1);
         if (!folder.isDirectory()){
             System.out.println("Path not a valid directory");
             return null;
