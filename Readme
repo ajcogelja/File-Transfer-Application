@@ -1,1 +1,1 @@
-This application uses JavaFX to list the contents of a directory, then you can send those files to other clients(WIP)
+This application allows a user to set up a server on a computer which can be connected to and used as remote storage for files
