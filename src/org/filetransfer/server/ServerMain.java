@@ -148,8 +148,7 @@ public class ServerMain{
                             while((data = fis.read()) != -1){
                                 toClient.write(data);
                             }
-                                toClient.write(-1);
-
+                            toClient.write(-1);
                             break;
                         case -1:
                             System.out.println("End of File Received");

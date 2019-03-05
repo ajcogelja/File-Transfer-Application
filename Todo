@@ -1,8 +1,9 @@
 TODO:
 - Improve File Selection Process (click interface?)
+- Add Task Manager (Keeps track of if a function is running currently, otherwise it can break)
+    : Trying Atomic Vars to prevent multiple functions writing to the server at once
+    : If that doesn't work I can add an activity queue to manage user actions
 - Rewrite data transfer to use 1 kilobyte buffers
-- Make overall UI prettier
-- Code writing to client from server
 - Change server to work off of public IP's not just localhost
 - Think of more functionality!
 - Add Huffman encoding tree and write huffman copy to server

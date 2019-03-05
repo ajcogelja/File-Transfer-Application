@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a24fba81-e206-40a2-9b4e-c42ddd254b0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain$Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/ClientMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/FolderGetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/client/FolderGetter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain$ClientThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileProject/org/filetransfer/server/ServerMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todo" beforeDir="false" afterPath="$PROJECT_DIR$/Todo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,37 +39,40 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="7" />
+          <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12849" />
-          <entry key="PLAIN_TEXT" value="1655" />
+          <entry key="JAVA" value="13336" />
+          <entry key="PLAIN_TEXT" value="2001" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="172" column="49" selection-start-line="172" selection-start-column="49" selection-end-line="172" selection-end-column="49" />
+            <state relative-caret-position="447">
+              <caret line="384" column="29" selection-start-line="384" selection-start-column="29" selection-end-line="384" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#8174#9073#0" expanded="true" />
+                <element signature="e#9072#9073#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Todo">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+            <state relative-caret-position="68">
+              <caret line="4" column="77" selection-start-line="4" selection-start-column="77" selection-end-line="4" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -92,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+            <state relative-caret-position="984">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,6 +110,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>running</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -119,10 +124,10 @@
         <option value="$PROJECT_DIR$/src/org/filetransfer/FolderGetter.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/Main.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/server/Main.java" />
-        <option value="$PROJECT_DIR$/Todo" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/server/ServerMain.java" />
         <option value="$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java" />
+        <option value="$PROJECT_DIR$/Todo" />
       </list>
     </option>
   </component>
@@ -132,9 +137,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
-    <option name="width" value="1995" />
+    <option name="width" value="2140" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -195,6 +200,14 @@
               <item name="filetransfer" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="File Transfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FileProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="filetransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="contents" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -204,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551763766677" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551766290703" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -311,7 +324,7 @@
       <workItem from="1550245799370" duration="3804000" />
       <workItem from="1550260938497" duration="7929000" />
       <workItem from="1550855822808" duration="344000" />
-      <workItem from="1551754740485" duration="6988000" />
+      <workItem from="1551754740485" duration="9032000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Server infastructure implemented">
       <created>1546221587504</created>
@@ -390,17 +403,24 @@
       <option name="project" value="LOCAL" />
       <updated>1551759888610</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Retrieve Button Added and UI updated to look prettier all around">
+      <created>1551763794732</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551763794732</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37487000" />
+    <option name="totallyTimeSpent" value="39531000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="798" height="830" extended-state="0" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1891892" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09389672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -409,7 +429,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27753934" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27478755" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -449,15 +469,27 @@
     <MESSAGE value="capable of getting the list of files from the server, and the server populates its hashmap now" />
     <MESSAGE value="Minor changes and code reorganization to improve readability" />
     <MESSAGE value="Added retrieve function to get file from server, and began reorganizing the UI of the client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added retrieve function to get file from server, and began reorganizing the UI of the client" />
+    <MESSAGE value="Retrieve Button Added and UI updated to look prettier all around" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retrieve Button Added and UI updated to look prettier all around" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sudo.txt" />
-    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/contents/sudo.txt" />
-    <entry file="file://$PROJECT_DIR$/Todo">
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/contents/sudo.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/contents/census.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/server/contents/sudo.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        <state relative-caret-position="984">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -471,23 +503,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/FolderGetter.java">
+    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+        <state relative-caret-position="447">
+          <caret line="384" column="29" selection-start-line="384" selection-start-column="29" selection-end-line="384" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8174#9073#0" expanded="true" />
+            <element signature="e#9072#9073#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/filetransfer/client/ClientMain.java">
+    <entry file="file://$PROJECT_DIR$/Todo">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="172" column="49" selection-start-line="172" selection-start-column="49" selection-end-line="172" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="77" selection-start-line="4" selection-start-column="77" selection-end-line="4" selection-end-column="77" />
         </state>
       </provider>
     </entry>

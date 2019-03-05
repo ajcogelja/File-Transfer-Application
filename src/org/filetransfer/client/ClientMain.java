@@ -15,6 +15,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /*
 Author: Alex Cogelja
@@ -45,6 +46,7 @@ public class ClientMain extends Application {
     private boolean connected = false;
     private final String DIRECTORYPATH = "src/org/filetransfer/client/contents/";
 
+    public AtomicBoolean running = new AtomicBoolean(false);
 
     //Starts the application when it is run
     public static void main(String[] args) {
@@ -170,7 +172,7 @@ public class ClientMain extends Application {
                 String filename = selectFromServer.getText();
                 client.retrieve(filename);
             } else {
-                System.out.println("Not Connected");
+                System.out.println("Not Connected or No Text Input");
             }
         });
 
@@ -233,6 +235,35 @@ public class ClientMain extends Application {
                 return false;
             }
         }
+
+        Thread listener = new Thread(){
+            @Override
+            public void run() {
+                //this loop should write to the server what we want to do
+                //if we want to send a file write byte 00000001
+                //if nothing write byte 00000000
+
+                while(true){ //this is what we want to listen for
+                    try {
+                        if (connected) {
+                            serverList.clear();
+                            List<String> sFiles = getServerFiles();
+                            if(sFiles != null) {
+                                for (String s : sFiles) {
+                                    serverList.appendText(s + "\n");
+                                }
+                            }
+                            sFiles.clear();
+                        }
+                        sleep(200);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        };
+
         private boolean openConnection(){
             try{
                 socket = new Socket(server, port);
@@ -242,32 +273,7 @@ public class ClientMain extends Application {
             }catch (Exception e){
                 e.printStackTrace();
             }
-            Thread listener = new Thread(){
-                @Override
-                public void run() {
-                    //this loop should write to the server what we want to do
-                    //if we want to send a file write byte 00000001
-                    //if nothing write byte 00000000
-                    if (connected) {
-                        serverList.clear();
-                        List<String> sFiles = getServerFiles();
-                        if(sFiles != null) {
-                            for (String s : sFiles) {
-                                serverList.appendText(s + "\n");
-                            }
-                        }
-                    }
 
-                    while(true){ //this is what we want to listen for
-                        try {
-                            sleep(200);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                }
-            };
 
             listener.start();
 
@@ -275,6 +281,8 @@ public class ClientMain extends Application {
         }
 
         public boolean disconnect(){
+            while(running.get()); //infinite while loop while an application is running
+            running.set(true);
             if (socket.isConnected()){
                 try {
                     toServer.writeInt(-2);
@@ -284,13 +292,17 @@ public class ClientMain extends Application {
                     connected = false;
                     System.out.println("Disconnected Successfully");
                 } catch (IOException e) {
+                    running.set(false);
                     e.printStackTrace();
                 }
             }
+            running.set(false);
             return true;
         }
 
         public List<String> getServerFiles(){
+            while(running.get());
+            running.set(true);
             if(connected){
                 List<String> serverFiles = new ArrayList<>();
                 try {
@@ -301,14 +313,17 @@ public class ClientMain extends Application {
                         serverFiles.add(input);
                     }
                     toServer.writeInt(-1);
+                    running.set(false);
                     return serverFiles;
                 } catch (Exception e){
+                    running.set(false);
                     e.printStackTrace();
                 }
 
             } else {
                 System.out.println("Cannot retrieve list, no connection to Server");
             }
+            running.set(false);
             return null;
         }
 
@@ -316,6 +331,7 @@ public class ClientMain extends Application {
             if(name != null){
                 File file = null;
                 FileOutputStream fout = null;
+                while (running.get());
                 try {
                     toServer.writeInt(3); //indicate server usage
                     toServer.writeUTF(name); //name of file to be retrieved
@@ -335,8 +351,10 @@ public class ClientMain extends Application {
                     e.printStackTrace();
                     System.out.println("File Transmission Interrupted");
                     file.delete();
+                    running.set(false);
                 }
             }
+            running.set(false);
 
         }
 
@@ -347,6 +365,8 @@ public class ClientMain extends Application {
                     //Need to indicate server should read a file
                     //IT WORKS!!!
                     System.out.println("Starting sending data");
+                    while (running.get());
+                    running.set(true);
                     toServer.writeInt(1);
                     toServer.writeUTF(file.getName());
                     int data;
@@ -355,11 +375,14 @@ public class ClientMain extends Application {
                     }
                     toServer.writeInt(-1); //-1 indicates end of trans.
                     System.out.println("Finished sending data");
+                    running.set(false);
                     return true;
                 } catch (Exception e) {
                     e.printStackTrace();
+                    running.set(false);
                 }
             }
+            running.set(false);
             return false;
         }
 
