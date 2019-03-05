@@ -1,14 +1,11 @@
 package org.filetransfer.client;
 
 import javafx.application.*;
-import javafx.event.EventHandler;
 import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -34,6 +31,7 @@ public class ClientMain extends Application {
     private Button connect;
     private Button disconnect;
     private Button upload;
+    private Button getFile;
     private TextArea serverList;
     private TextArea textbox;
     private String fileList;
@@ -45,6 +43,7 @@ public class ClientMain extends Application {
     private Client client;
     private int id = 0;
     private boolean connected = false;
+    private final String DIRECTORYPATH = "src/org/filetransfer/client/contents/";
 
 
     //Starts the application when it is run
@@ -107,8 +106,8 @@ public class ClientMain extends Application {
         });
 
         connect = new Button("Connect to Server");
-        connect.setLayoutX(textbox.getLayoutX() + 250);
-        connect.setLayoutY(textbox.getLayoutY() + 10);
+        connect.setLayoutX(files.getLayoutX() + 250);
+        connect.setLayoutY(files.getLayoutY() - 10);
         connect.setOnMouseClicked(event -> {
             if (!connected){
                 client = new Client("127.0.0.1", 1582);
@@ -282,7 +281,31 @@ public class ClientMain extends Application {
             return null;
         }
 
-        public void retrieve(File file){
+        public void retrieve(String name){ //pass the name of the file to retrieve
+            if(name != null){
+                File file = null;
+                FileOutputStream fout = null;
+                try {
+                    toServer.writeInt(3); //indicate server usage
+                    toServer.writeUTF(name); //name of file to be retrieved
+
+                    //now read the file and store it locally
+                    int data;
+                    file = new File(DIRECTORYPATH + name);
+                    if(!file.exists()){
+                        file.createNewFile();
+                    }
+                    fout = new FileOutputStream(file);
+                    while((data = fromServer.read()) != -1){
+                        fout.write(data);
+                    }
+                    System.out.println("File Received");
+                } catch (IOException e){
+                    e.printStackTrace();
+                    System.out.println("File Transmission Interrupted");
+                    file.delete();
+                }
+            }
 
         }
 

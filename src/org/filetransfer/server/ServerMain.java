@@ -1,9 +1,6 @@
 package org.filetransfer.server;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -86,7 +83,17 @@ public class ServerMain{
             }
         }
 
-        public void write(String name){
+        public File write(String name){
+            File file = null;
+            if(name != null) {
+                file = map.get(name); //check if exists in hashmap
+                if (!file.exists()) {
+                    System.out.println("File does not exist");
+                    return null;
+                }
+            }
+                //if retrieved
+                return file;
 
         }
 
@@ -119,7 +126,7 @@ public class ServerMain{
                     int command = fromClient.readInt();
                     String name;
                     switch (command){
-                        case 1: //get file
+                        case 1: //get file from client
                             System.out.println("1 Received");
                             name = fromClient.readUTF();
                             System.out.println(name);
@@ -132,6 +139,18 @@ public class ServerMain{
                                 System.out.println(s);
                             }
                             toClient.writeInt(-1);
+                            break;
+                        case 3: //send file to client
+                            String filename = fromClient.readUTF();
+                            File file = write(filename);
+                            int data;
+                            FileInputStream fis = new FileInputStream(file);
+                            while((data = fis.read()) != -1){
+                                toClient.write(data);
+                            }
+                                toClient.write(-1);
+
+                            break;
                         case -1:
                             System.out.println("End of File Received");
                             break;
