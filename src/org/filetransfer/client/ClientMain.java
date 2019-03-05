@@ -81,14 +81,14 @@ public class ClientMain extends Application {
         textbox.setMinWidth(200);
         textbox.setMaxWidth(200);
         textbox.setMinHeight(350);
-        textbox.setLayoutX(50);
-        textbox.setLayoutY(90);
+        textbox.setLayoutX(60);
+        textbox.setLayoutY(200);
         textbox.setEditable(false);
 
-        Text files = new Text("Directory Contents");
-        files.setFont(Font.font("Verdana", 16));
-        files.setLayoutX(textbox.getLayoutX() + 18);
-        files.setLayoutY(textbox.getLayoutY() - 16);
+        Text direcContents = new Text("Directory Contents");
+        direcContents.setFont(Font.font("Verdana", 16));
+        direcContents.setLayoutX(textbox.getLayoutX() + 18);
+        direcContents.setLayoutY(textbox.getLayoutY() - 16);
 
         inputPath = new Button("Search");
         inputPath.setLayoutY(10);
@@ -106,8 +106,9 @@ public class ClientMain extends Application {
         });
 
         connect = new Button("Connect to Server");
-        connect.setLayoutX(files.getLayoutX() + 250);
-        connect.setLayoutY(files.getLayoutY() - 10);
+        connect.setFont(Font.font("Verdana", 16));
+        connect.setLayoutX(inputArea.getLayoutX() + 30);
+        connect.setLayoutY(inputArea.getLayoutY() + 25);
         connect.setOnMouseClicked(event -> {
             if (!connected){
                 client = new Client("127.0.0.1", 1582);
@@ -122,8 +123,9 @@ public class ClientMain extends Application {
         });
 
         disconnect = new Button("Disconnect");
-        disconnect.setLayoutX(connect.getLayoutX() + 160);
-        disconnect.setLayoutY(connect.getLayoutY());
+        disconnect.setFont(Font.font("Verdana", 16));
+        disconnect.setLayoutX(connect.getLayoutX());
+        disconnect.setLayoutY(connect.getLayoutY() + 50);
         disconnect.setOnMouseClicked(event -> {
             if (connected){
                 client.disconnect();
@@ -133,12 +135,14 @@ public class ClientMain extends Application {
         });
 
         upload = new Button("Upload File");
-        upload.setLayoutX(connect.getLayoutX());
-        upload.setLayoutY(connect.getLayoutY() + 40);
+        upload.setFont(Font.font("Verdana", 16));
+        upload.setLayoutX(connect.getLayoutX() + 240);
+        upload.setLayoutY(connect.getLayoutY());
 
         TextField selectFile = new TextField();
-        selectFile.setLayoutX(disconnect.getLayoutX() - 40);
+        selectFile.setLayoutX(upload.getLayoutX() + 120);
         selectFile.setLayoutY(upload.getLayoutY());
+        selectFile.setMinHeight(30);
 
         upload.setOnMouseClicked(event -> {
             if (connected && selectFile.getText().length() > 0){
@@ -151,14 +155,38 @@ public class ClientMain extends Application {
             }
         });
 
+        getFile = new Button("Get File");
+        getFile.setFont(Font.font("Verdana", 16));
+        getFile.setLayoutX(disconnect.getLayoutX() + 180);
+        getFile.setLayoutY(disconnect.getLayoutY());
+
+        TextField selectFromServer = new TextField();
+        selectFromServer.setLayoutX(getFile.getLayoutX() + 100);
+        selectFromServer.setLayoutY(getFile.getLayoutY());
+        selectFromServer.setMinHeight(30);
+
+        getFile.setOnMouseClicked(event -> {
+            if (connected && selectFromServer.getText().length() > 0){
+                String filename = selectFromServer.getText();
+                client.retrieve(filename);
+            } else {
+                System.out.println("Not Connected");
+            }
+        });
+
         serverList = new TextArea();
-        serverList.setLayoutY(upload.getLayoutY() + 40);
-        serverList.setLayoutX(upload.getLayoutX());
+        serverList.setLayoutY(textbox.getLayoutY());
+        serverList.setLayoutX(textbox.getLayoutX() + textbox.getMinWidth() + 80);
         serverList.setMaxWidth(200);
-        serverList.setMinWidth(150);
+        serverList.setMinWidth(200);
         serverList.setMinHeight(350);
         serverList.setMaxHeight(350);
         serverList.setEditable(false);
+
+        Text serverContents = new Text("Server Contents");
+        serverContents.setFont(Font.font("Verdana", 16));
+        serverContents.setLayoutX(serverList.getLayoutX() + 24);
+        serverContents.setLayoutY(serverList.getLayoutY() - 16);
 
         //add all of the objects
         pane.getChildren().add(inputArea);
@@ -167,10 +195,13 @@ public class ClientMain extends Application {
         pane.getChildren().add(inputPath);
         pane.getChildren().add(connect);
         pane.getChildren().add(disconnect);
-        pane.getChildren().add(files);
+        pane.getChildren().add(direcContents);
         pane.getChildren().add(upload);
         pane.getChildren().add(selectFile);
         pane.getChildren().add(serverList);
+        pane.getChildren().add(serverContents);
+        pane.getChildren().add(getFile);
+        pane.getChildren().add(selectFromServer);
 
         scene = new Scene(pane, 600, 600);
         scene.setFill(Color.BEIGE);
